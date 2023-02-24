@@ -1,8 +1,27 @@
-<h1>Movies</h1>
-<ul>
-  <% @lists.each do |list| %>
-   <li>
-  <%= link_to list.name, list_path(list)%>
-   </li>
-  <% end %>
-</ul>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<%= asset_url("cinema.png")%>);">
+  <div class="container">
+    <h1>Find Your <strong>Best Movie</strong> from <strong>This Website</strong>!</h1>
+    <p>Bring happiness in Home!</p>
+    <a class="btn btn-flat" href="#">Find Ticket Here</a>
+  </div>
+</div>
+
+
+
+<h1 class= "title">Lists</h1>
+
+<div >
+  <ul class= " d-flex justify-content-around">
+    <% @lists.each do |list| %>
+    <li>
+      <%= link_to "", list_path(list)%>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url("movie3.png")%>);">
+      </div>
+      <p>
+        <%= list.name %>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+</div>
